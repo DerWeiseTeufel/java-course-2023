@@ -1,27 +1,136 @@
 package edu.project1;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
+import java.util.Locale;
+import java.util.Scanner;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public final class Main {
-    private final static Logger LOGGER = LogManager.getLogger();
-
-    private Main() {
+public class Main {
+    /*
+    interface Dictionary {
+        @NotNull String randomWord();
     }
 
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        LOGGER.info("Hello and welcome!");
+    class Session {
+        private final String answer;
+        private final char[] userAnswer;
+        private final int maxAttempts;
+        private int attempts;
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 0; i <= 2; i++) {
+        @NotNull GuessResult guess(char guess);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            LOGGER.info("i = {}", i);
+        @NotNull GuessResult giveUp();
+    }
+
+    sealed interface GuessResult {
+        char[] state();
+
+        int attempt();
+
+        int maxAttempts();
+
+        @NotNull String message();
+
+        record Defeat(...) implements GuessResult {
+            @Override
+            public char[] state() {
+                return new char[0];
+            }
+
+            @Override
+            public int attempt() {
+                return 0;
+            }
+
+            @Override
+            public int maxAttempts() {
+                return 0;
+            }
+
+            @Override
+            public @NotNull String message() {
+                return null;
+            }
+        }
+
+        record Win(...) implements GuessResult {
+            @Override
+            public char[] state() {
+                return new char[0];
+            }
+
+            @Override
+            public int attempt() {
+                return 0;
+            }
+
+            @Override
+            public int maxAttempts() {
+                return 0;
+            }
+
+            @Override
+            public @NotNull String message() {
+                return null;
+            }
+        }
+
+        record SuccessfulGuess(...) implements GuessResult {
+            @Override
+            public char[] state() {
+                return new char[0];
+            }
+
+            @Override
+            public int attempt() {
+                return 0;
+            }
+
+            @Override
+            public int maxAttempts() {
+                return 0;
+            }
+
+            @Override
+            public @NotNull String message() {
+                return null;
+            }
+        }
+
+        record FailedGuess(...) implements GuessResult {
         }
     }
+
+    class ConsoleHangman {
+        public void run() {
+
+            while (true){
+                int max = printMenuGetAtt();
+
+            }
+        }
+
+        private GuessResult tryGuess(Session session, String input) {
+        }
+
+        private void printState(GuessResult guess) {
+        }
+        private int printMenuGetAtt(){
+            System.out.println("Hello, this is hangman, choose the difficulty level: easy, medium, hard");
+            Scanner scan = new Scanner(System.in);
+            String s = scan.next().toLowerCase(Locale.ROOT);
+            String l1 = "easy", l2 = "medium", l3= "hard";
+            int maxAtt = -1;
+            if(s.equals(l1)){
+                maxAtt = 10;
+            } else if (s.equals(l2)) {
+                maxAtt=7;
+            }else {
+                maxAtt = 5;
+            }
+            return maxAtt;
+
+        }
+    }
+
+     */
 }
